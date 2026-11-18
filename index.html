@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ViceCityLaunch.live | GTA 6 Global Rollout, NZ Trick & Storage Calculator</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Real-time GTA 6 global rollout countdown clocks, working New Zealand region switch guide, interactive PS5 & Xbox storage calculator, and Day-One Leonida checklist.">
+  <meta name="keywords" content="GTA 6, GTA VI, Vice City, New Zealand trick, GTA 6 release time, PS5 storage calculator, Xbox Series X, Leonida checklist, GTA 6 unlock countdown">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B0B14">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vicecitylaunch.live/">
+  <meta property="og:title" content="GTA 6 Is Live: Global Rollout, NZ Trick & Console Storage Calculator">
+  <meta property="og:description" content="Watch real-time midnight unlock clocks worldwide, use the New Zealand console trick to play right now, and check if your PS5 or Xbox has enough space for GTA 6.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1200&auto=format&fit=crop">
+  <meta property="og:site_name" content="ViceCityLaunch.live">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://vicecitylaunch.live/">
+  <meta name="twitter:title" content="GTA 6 Is Live: Global Rollout, NZ Trick & Console Storage Calculator">
+  <meta name="twitter:description" content="Watch real-time midnight unlock clocks worldwide, use the New Zealand console trick to play right now, and calculate your PS5/Xbox storage space.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?q=80&w=1200&auto=format&fit=crop">
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230B0B14' stroke='%23FF2A85' stroke-width='4'/><path d='M50 20 L50 80 M35 45 C45 35 55 35 65 45 M30 60 C42 48 58 48 70 60' stroke='%2300F0FF' stroke-width='6' stroke-linecap='round' fill='none'/><circle cx='50' cy='38' r='12' fill='%23FFB800'/></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#0B0B14',
+            vicePink: '#FF2A85',
+            viceCyan: '#00F0FF',
+            viceGold: '#FFB800',
+            viceGreen: '#00FF88',
+            viceCard: '#131326'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Bespoke Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#0B0B14] text-slate-100 selection:bg-[#FF2A85] selection:text-white pb-20 md:pb-8">
+
+  <!-- Ambient Background Accents -->
+  <div class="ambient-glow-pink"></div>
+  <div class="ambient-glow-cyan"></div>
+  <div class="ambient-glow-gold"></div>
+  <div class="fixed inset-0 retro-grid-bg pointer-events-none z-0"></div>
+
+  <!-- Top Global Announcement & Support Bar -->
+  <aside aria-label="Announcement" class="relative z-50 bg-gradient-to-r from-pink-600/30 via-purple-900/30 to-cyan-500/20 border-b border-pink-500/30 backdrop-blur-md px-3 py-2 text-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-400 text-emerald-300 font-extrabold tracking-wide uppercase text-[10px]">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-live-indicator"></span>
+          NEW ZEALAND LIVE NOW
+        </span>
+        <span class="hidden sm:inline text-slate-300">Global Midnight Rollout in Progress over next 24 Hours.</span>
+      </div>
+      <div class="flex items-center gap-3 ml-auto">
+        <!-- SFX Toggle -->
+        <button id="sound-toggle-btn" class="flex items-center gap-1 px-2 py-1 rounded bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 transition-colors text-[11px] font-mono" title="Toggle 80s Retro Sound Effects">
+          <svg id="sound-icon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
+          <span id="sound-status-text">SFX OFF</span>
+        </button>
+
+        <!-- KO-FI LINK (Top Bar CTA) -->
+        <a href="#KOFI_LINK" id="top-kofi-link" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-pink-400 hover:text-pink-300 font-bold hover:underline">
+          <span>☕</span>
+          <span>Buy Me a Coffee</span>
+        </a>
+
+        <!-- Squad Share Button -->
+        <button class="share-squad-btn flex items-center gap-1 px-2.5 py-1 rounded bg-pink-500/20 hover:bg-pink-500/40 text-pink-300 border border-pink-500/30 font-bold transition-all">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          <span>Share</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Main Navigation Header -->
+  <header class="sticky top-0 z-40 bg-[#0B0B14]/90 backdrop-blur-md border-b border-slate-800/80 px-4 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-[#FF2A85] to-[#00F0FF] p-0.5 shadow-lg shadow-pink-500/20 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-[#0B0B14] rounded-[7px] flex items-center justify-center">
+            <span class="text-lg">🌴</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-display font-black text-lg md:text-xl tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+            VICECITY<span class="text-[#FF2A85]">LAUNCH</span><span class="text-[#00F0FF] text-xs font-mono font-bold ml-1 px-1.5 py-0.5 rounded bg-cyan-400/10 border border-cyan-400/30">.LIVE</span>
+          </span>
+          <span class="hidden md:block text-[10px] uppercase font-mono tracking-wider text-slate-400">GTA 6 Global Countdown & Leonida Tracker</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-300">
+        <a href="#rollout" class="hover:text-cyan-400 transition-colors">Launch Clocks</a>
+        <a href="#nz-trick" class="hover:text-pink-400 transition-colors flex items-center gap-1.5">
+          <span>NZ Trick</span>
+          <span class="px-1.5 py-0.2 rounded bg-pink-500/20 text-pink-400 text-[10px] font-mono">LIVE</span>
+        </a>
+        <a href="#storage-calc" class="hover:text-cyan-400 transition-colors">Storage Calculator</a>
+        <a href="#checklist" class="hover:text-cyan-400 transition-colors">Leonida Checklist</a>
+        <a href="#gift-cards" class="hover:text-amber-400 transition-colors">Gift Cards</a>
+      </nav>
+
+      <!-- Action Button Group -->
+      <div class="flex items-center gap-2">
+        <button class="share-squad-btn btn-cyan px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1.5 font-bold">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          <span class="hidden sm:inline">Share Tool</span>
+        </button>
+
+        <!-- KO-FI LINK (Header Button) -->
+        <a href="#KOFI_LINK" target="_blank" rel="noopener noreferrer" class="btn-pink px-3.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1">
+          <span>☕</span>
+          <span class="hidden sm:inline">Support Dev</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 max-w-7xl mx-auto px-4 py-6 md:py-10 space-y-12">
+
+    <!-- ================================================================= -->
+    <!-- TOP AD BANNER CONTAINER (Active Sponsor Banner + Ad Script Slot) -->
+    <!-- ================================================================= -->
+    <div id="ad-banner-top" class="max-w-5xl mx-auto px-4 py-2">
+      <!-- AD NETWORK SCRIPT CONTAINER (Paste Adsterra / Monetag / AdSense script inside here) -->
+      <div id="ad-network-top-slot" class="hidden">
+        <!-- PASTE YOUR AD SCRIPT TAG HERE:
+        <script type="text/javascript" src="//your-ad-network.com/banner.js"></script>
+        -->
+      </div>
+
+      <!-- ACTIVE GAMING SPONSOR BANNER (Displays automatically & earns affiliate revenue) -->
+      <div id="ad-top-sponsor" class="relative overflow-hidden rounded-xl bg-gradient-to-r from-purple-950/80 via-[#161633] to-slate-900 border border-pink-500/30 p-3 sm:p-4 shadow-lg shadow-pink-500/10 flex flex-col sm:flex-row items-center justify-between gap-3 group hover:border-pink-500/60 transition-all">
+        <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          <div class="w-10 h-10 rounded-lg bg-pink-500/20 border border-pink-500/40 flex items-center justify-center text-xl flex-shrink-0">
+            ⚡
+          </div>
+          <div>
+            <div class="flex items-center justify-center sm:justify-start gap-2 mb-0.5">
+              <span class="px-1.5 py-0.5 rounded text-[9px] uppercase font-black tracking-wider bg-pink-500/20 text-pink-300 border border-pink-500/40">Sponsored Deal</span>
+              <span class="text-[10px] text-emerald-400 font-mono font-bold">Limited Day-One Stock</span>
+            </div>
+            <div class="text-xs sm:text-sm font-bold text-white leading-tight">
+              GTA 6 Out-of-Space Warning: Get 1TB / 2TB Heatsink Gen4 SSDs Up to 35% Off
+            </div>
+          </div>
+        </div>
+
+        <a href="#AFFILIATE_PS5_SSD" class="btn-pink px-4 py-2 rounded-lg text-xs font-black tracking-wide whitespace-nowrap shadow-md shadow-pink-500/30 flex items-center gap-1.5 flex-shrink-0">
+          <span>Claim Hardware Deal</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+    <!-- END TOP AD BANNER -->
+
+    <!-- ================================================================= -->
+    <!-- SECTION 1: HERO SECTION & GLOBAL ROLLOUT DASHBOARD -->
+    <!-- ================================================================= -->
+    <section id="rollout" class="space-y-6">
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-pink-500/30 text-pink-400 text-xs font-bold tracking-wider uppercase">
+          <span class="w-2 h-2 rounded-full bg-[#FF2A85] animate-ping"></span>
+          Leonida Global Rollout Tracker
+        </div>
+        <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl tracking-tight text-white leading-[1.08]">
+          GRAND THEFT AUTO VI <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF2A85] via-[#FFB800] to-[#00F0FF] text-glow-pink">
+            GLOBAL MIDNIGHT ROLLOUT
+          </span>
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          GTA 6 launches at midnight local time on consoles worldwide on November 19, 2026. New Zealand is live right now. Track your region or use the region switch method below to play early.
+        </p>
+
+        <!-- User's Local Time Dynamic Countdown Pill -->
+        <div id="user-local-countdown" class="inline-flex items-center justify-center px-4 py-2 rounded-xl bg-slate-900/90 border border-cyan-400/40 text-xs sm:text-sm font-semibold shadow-lg shadow-cyan-400/10">
+          <span class="text-slate-400">Detecting your local timezone unlock time...</span>
+        </div>
+      </div>
+
+      <!-- Regional Countdown Clocks Grid -->
+      <div id="regional-clocks-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered dynamically by app.js with live countdowns & elapsed counters -->
+      </div>
+
+      <!-- Collapsible Quick-Guide: How to Play Early (NZ Region Switch) -->
+      <div id="nz-trick" class="vice-card p-5 sm:p-6 border-pink-500/30 bg-gradient-to-b from-[#16162E] to-[#101020]">
+        <div class="flex items-center justify-between cursor-pointer select-none" id="nz-toggle-btn">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-lg bg-pink-500/20 border border-pink-500/40 flex items-center justify-center text-xl flex-shrink-0">
+              🇳🇿
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="font-display font-extrabold text-base sm:text-lg text-white">How to Play Early: The New Zealand Region Switch</h3>
+                <span class="px-2 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider bg-emerald-500/20 border border-emerald-400/40 text-emerald-300">
+                  Confirmed Working
+                </span>
+              </div>
+              <p class="text-xs text-slate-400">Step-by-step instructions for Xbox Series X|S vs. PlayStation 5</p>
+            </div>
+          </div>
+          <button class="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white transition-transform duration-200" id="nz-toggle-icon">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+        </div>
+
+        <!-- Collapsible Content Body -->
+        <div id="nz-trick-content" class="collapsible-content">
+          <div class="pt-6 mt-4 border-t border-slate-800/80 space-y-5">
+            <!-- Platform Tabs -->
+            <div class="flex items-center gap-2 border-b border-slate-800 pb-3">
+              <button id="tab-xbox" class="px-4 py-2 rounded-lg text-sm font-bold bg-pink-500 text-white shadow-lg shadow-pink-500/30 transition-all">
+                Xbox Series X | S (5-Min Trick)
+              </button>
+              <button id="tab-ps5" class="px-4 py-2 rounded-lg text-sm font-bold bg-slate-800 text-slate-300 hover:text-white transition-all">
+                PlayStation 5 (PSN Account Method)
+              </button>
+            </div>
+
+            <!-- Xbox Panel -->
+            <div id="panel-xbox" class="space-y-4">
+              <div class="p-4 rounded-xl bg-emerald-950/20 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm">
+                <strong>Why it works on Xbox:</strong> Digital Xbox store licenses unlock based on the console's currently selected system location, regardless of which domestic store you bought the game from.
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs sm:text-sm">
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-pink-400 font-mono font-bold text-sm mb-1">STEP 01</div>
+                  <h4 class="font-bold text-white mb-1">Open System Settings</h4>
+                  <p class="text-slate-400">Press the Xbox button on your controller, navigate to <strong>Profile & system &gt; Settings</strong>.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-pink-400 font-mono font-bold text-sm mb-1">STEP 02</div>
+                  <h4 class="font-bold text-white mb-1">Language & Location</h4>
+                  <p class="text-slate-400">Select <strong>System &gt; Language & location</strong>. In the Location dropdown, select <strong>New Zealand</strong>.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-pink-400 font-mono font-bold text-sm mb-1">STEP 03</div>
+                  <h4 class="font-bold text-white mb-1">Restart Your Console</h4>
+                  <p class="text-slate-400">Click <strong>Restart now</strong>. Wait for your Xbox Series X|S to fully reboot.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-emerald-400 font-mono font-bold text-sm mb-1">STEP 04</div>
+                  <h4 class="font-bold text-white mb-1">Boot GTA 6 & Play</h4>
+                  <p class="text-slate-400">Launch GTA 6 from your games library. The game recognizes NZ launch time and unlocks instantly.</p>
+                </div>
+              </div>
+
+              <p class="text-xs text-slate-400 italic">
+                * Note: Once your home region reaches midnight local time, you can safely switch your Xbox location back to your home country without losing progress.
+              </p>
+            </div>
+
+            <!-- PS5 Panel -->
+            <div id="panel-ps5" class="hidden space-y-4">
+              <div class="p-4 rounded-xl bg-amber-950/20 border border-amber-500/30 text-amber-300 text-xs sm:text-sm">
+                <strong>Important PS5 Reality Check:</strong> Unlike Xbox, Sony hard-locks PlayStation Network purchases to the country of account creation. Changing your PS5 console clock or location does <em>not</em> bypass midnight.
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-4 gap-3 text-xs sm:text-sm">
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-cyan-400 font-mono font-bold text-sm mb-1">STEP 01</div>
+                  <h4 class="font-bold text-white mb-1">Create NZ PSN Account</h4>
+                  <p class="text-slate-400">Create a secondary PlayStation Network account via your browser with Region set to <strong>New Zealand</strong>.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-cyan-400 font-mono font-bold text-sm mb-1">STEP 02</div>
+                  <h4 class="font-bold text-white mb-1">Buy NZ PSN Vouchers</h4>
+                  <p class="text-slate-400">Domestic credit cards won't work on NZ PSN. Purchase New Zealand Dollar (NZD) digital gift cards online.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-cyan-400 font-mono font-bold text-sm mb-1">STEP 03</div>
+                  <h4 class="font-bold text-white mb-1">Redeem & Pre-load</h4>
+                  <p class="text-slate-400">Redeem the NZD codes on your NZ PSN account, purchase GTA 6, and download the full game file.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-slate-900/80 border border-slate-800">
+                  <div class="text-emerald-400 font-mono font-bold text-sm mb-1">STEP 04</div>
+                  <h4 class="font-bold text-white mb-1">Console Sharing</h4>
+                  <p class="text-slate-400">Enable <strong>Console Sharing and Offline Play</strong> on the NZ account. You can now launch and earn trophies on your primary profile.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <button id="share-nz-trick-btn" class="btn-pink px-4 py-2 rounded-lg text-xs font-bold flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                <span>Copy NZ Trick Guide Link</span>
+              </button>
+              <span class="text-xs text-slate-400">Share this guide in group chats so friends can play right now.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- SECTION 2: INTERACTIVE PS5 & XBOX STORAGE & DELETE CALCULATOR -->
+    <!-- ================================================================= -->
+    <section id="storage-calc" class="space-y-6 pt-4">
+      <div class="text-center max-w-3xl mx-auto space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-cyan-400/30 text-cyan-400 text-xs font-bold tracking-wider uppercase">
+          Interactive Hardware Tool
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
+          PS5 & XBOX STORAGE & DELETE CALCULATOR
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm">
+          GTA 6 requires up to ~212 GB of uncompressed solid-state storage. Select your console model, toggle your edition, and discover whether you have enough room or what to delete.
+        </p>
+      </div>
+
+      <div class="vice-card p-5 sm:p-7 space-y-6">
+        <!-- Selectors Row: Console Model & Edition -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Console Select -->
+          <div class="space-y-2">
+            <label for="console-select" class="block text-xs uppercase font-mono font-bold tracking-wider text-slate-300">
+              1. Choose Your Console Hardware
+            </label>
+            <div class="relative">
+              <select id="console-select" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm font-semibold text-white focus:outline-none focus:border-cyan-400 transition-colors appearance-none cursor-pointer">
+                <option value="ps5-base" selected>PlayStation 5 Standard (825 GB &bull; 667 GB Usable)</option>
+                <option value="ps5-slim-1tb">PlayStation 5 Slim / Pro 1TB (1,000 GB &bull; 848 GB Usable)</option>
+                <option value="ps5-pro-2tb">PlayStation 5 Pro 2TB (2,000 GB &bull; 1,770 GB Usable)</option>
+                <option value="xbox-x">Xbox Series X (1,000 GB &bull; 802 GB Usable)</option>
+                <option value="xbox-s-512">Xbox Series S 512GB (512 GB &bull; 364 GB Usable)</option>
+                <option value="xbox-s-1tb">Xbox Series S 1TB (1,000 GB &bull; 802 GB Usable)</option>
+              </select>
+              <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- GTA 6 Edition Toggle -->
+          <div class="space-y-2">
+            <label class="block text-xs uppercase font-mono font-bold tracking-wider text-slate-300">
+              2. Required GTA 6 Install Package
+            </label>
+            <div class="flex items-center gap-2 bg-slate-900 p-1.5 rounded-xl border border-slate-700">
+              <button id="edition-standard" class="flex-1 py-2 px-3 rounded-lg text-xs md:text-sm font-bold bg-pink-500 text-white shadow-md shadow-pink-500/30 transition-all">
+                Standard Edition (~185 GB)
+              </button>
+              <button id="edition-deluxe" class="flex-1 py-2 px-3 rounded-lg text-xs md:text-sm font-bold bg-slate-800 text-slate-300 hover:text-white transition-all">
+                Day-1 Patch + High-Res (~212 GB)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Cards -->
+        <div class="grid grid-cols-3 gap-2 sm:gap-4 text-center">
+          <div class="p-3 sm:p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-[10px] sm:text-xs uppercase font-mono tracking-wider text-slate-400 mb-1">Usable Drive Space</div>
+            <div id="calc-usable-gb" class="text-lg sm:text-2xl font-black font-mono-num text-white">667 GB</div>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-[10px] sm:text-xs uppercase font-mono tracking-wider text-slate-400 mb-1">Installed Games</div>
+            <div id="calc-installed-gb" class="text-lg sm:text-2xl font-black font-mono-num text-pink-400">440 GB</div>
+          </div>
+          <div class="p-3 sm:p-4 rounded-xl bg-slate-900/90 border border-slate-800">
+            <div class="text-[10px] sm:text-xs uppercase font-mono tracking-wider text-slate-400 mb-1">GTA 6 Install Need</div>
+            <div id="calc-gta-gb" class="text-lg sm:text-2xl font-black font-mono-num text-cyan-400">185 GB</div>
+          </div>
+        </div>
+
+        <!-- Dynamic Segmented Storage Bar -->
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-xs font-semibold text-slate-300">
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-pink-500 inline-block"></span> Installed Games</span>
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-cyan-400 inline-block"></span> GTA 6 Required</span>
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-emerald-400 inline-block"></span> Free Buffer</span>
+          </div>
+
+          <div class="storage-bar-track">
+            <div id="storage-bar-games" class="storage-segment storage-segment-games" style="width: 60%;"></div>
+            <div id="storage-bar-gta" class="storage-segment storage-segment-gta6" style="width: 28%;"></div>
+            <div id="storage-bar-free" class="storage-segment storage-segment-free" style="width: 12%;"></div>
+            <div id="storage-bar-overflow" class="storage-segment storage-segment-overflow" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Dynamic Status Verdict Banner -->
+        <div id="storage-verdict-banner" class="p-5 rounded-xl border border-emerald-500/40 bg-emerald-950/30 box-glow-green transition-all">
+          <div id="storage-verdict-title" class="mb-1">
+            <!-- Injected by app.js -->
+          </div>
+          <p id="storage-verdict-desc" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <!-- Injected by app.js -->
+          </p>
+        </div>
+
+        <!-- Interactive Installed Games Checklist -->
+        <div class="space-y-4 pt-2 border-t border-slate-800">
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="font-bold text-white text-sm sm:text-base">Check Popular Installed Games on Your Console</h3>
+              <p class="text-xs text-slate-400">Check or uncheck games to see real-time impact on your free space</p>
+            </div>
+            <span class="text-xs font-mono text-slate-400">Auto-saved to device</span>
+          </div>
+
+          <div id="games-checklist-container" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <!-- Populated by app.js -->
+          </div>
+
+          <!-- Custom Game Adder Input -->
+          <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <div class="text-xs font-bold text-slate-300">Add Another Game on Your Console</div>
+            <div class="flex flex-wrap sm:flex-nowrap items-center gap-2">
+              <input type="text" id="custom-game-name" placeholder="Game Name (e.g., Baldur's Gate 3)" class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
+              <input type="number" id="custom-game-size" placeholder="GB (e.g., 105)" min="1" max="1000" class="w-24 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
+              <button id="add-custom-game-btn" class="btn-cyan px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap">
+                + Add Game
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- High-Converting Affiliate CTA Card -->
+        <div id="affiliate-recommendation-card" class="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#1a1a38] via-[#14142a] to-[#0f0f20] border border-cyan-400/30 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-cyan-300 text-[10px] font-bold uppercase tracking-wider mb-1">
+                Official Storage Solutions
+              </div>
+              <h3 class="font-display font-extrabold text-lg sm:text-xl text-white">Out of Space? Recommended 1TB & 2TB Expansion SSDs</h3>
+              <p class="text-xs text-slate-400">Never delete a game again. Install high-speed storage tested for GTA 6 instant loading.</p>
+            </div>
+            <span class="text-[11px] font-mono text-slate-400">Fast Prime Delivery</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <!-- PS5 Recommendation Block -->
+            <div id="affiliate-ps5-block" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 transition-all flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2 py-0.5 rounded bg-pink-500/20 text-pink-300 font-extrabold text-[10px] tracking-wider uppercase border border-pink-500/30">
+                    PlayStation 5 NVMe
+                  </span>
+                  <span class="text-xs font-mono font-bold text-emerald-400">Up to 7,300 MB/s</span>
+                </div>
+                <h4 class="font-bold text-white text-sm">WD_BLACK SN850X 1TB / 2TB with Heatsink</h4>
+                <p class="text-xs text-slate-400 mt-1">Officially licensed M.2 NVMe SSD. Pre-installed heatsink fits directly into PS5 expansion bay.</p>
+              </div>
+
+              <!-- AFFILIATE PS5 SSD URL -->
+              <a href="#AFFILIATE_PS5_SSD" target="_blank" rel="noopener noreferrer sponsored" class="btn-pink py-2.5 px-4 rounded-xl text-xs font-bold text-center block w-full">
+                Check PS5 SSD Price on Amazon &rarr;
+              </a>
+            </div>
+
+            <!-- Xbox Recommendation Block -->
+            <div id="affiliate-xbox-block" class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 transition-all flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="px-2 py-0.5 rounded bg-cyan-400/20 text-cyan-300 font-extrabold text-[10px] tracking-wider uppercase border border-cyan-400/30">
+                    Xbox Series X | S Card
+                  </span>
+                  <span class="text-xs font-mono font-bold text-emerald-400">Velocity Architecture</span>
+                </div>
+                <h4 class="font-bold text-white text-sm">Seagate / WD_BLACK C50 1TB Expansion Card</h4>
+                <p class="text-xs text-slate-400 mt-1">Instant plug-and-play into the rear expansion port. Matches internal SSD performance exactly.</p>
+              </div>
+
+              <!-- AFFILIATE XBOX CARD URL -->
+              <a href="#AFFILIATE_XBOX_CARD" target="_blank" rel="noopener noreferrer sponsored" class="btn-cyan py-2.5 px-4 rounded-xl text-xs font-bold text-center block w-full">
+                Check Xbox Card Price on Amazon &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="text-[10px] text-slate-500 text-center pt-1">
+            * Affiliate Disclosure: Purchases made through these verified hardware links may earn a small referral commission at zero additional cost to you.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- SECTION 3: DAY-ONE LEONIDA LAUNCH CHECKLIST & TROPHY TRACKER -->
+    <!-- ================================================================= -->
+    <section id="checklist" class="space-y-6 pt-4">
+      <div class="text-center max-w-3xl mx-auto space-y-2">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-pink-500/30 text-pink-400 text-xs font-bold tracking-wider uppercase">
+          Day-One Field Guide
+        </div>
+        <h2 class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">
+          DAY-ONE LEONIDA CHECKLIST & TROPHY TRACKER
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm">
+          Twenty essential settings, early story milestones, high-value collectibles, and online prep steps to dominate Vice City from minute one. Saved to your browser.
+        </p>
+      </div>
+
+      <div class="vice-card p-5 sm:p-7 space-y-6">
+        <!-- Progress Bar Header -->
+        <div class="p-4 rounded-xl bg-slate-900/90 border border-slate-800 space-y-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Launch Readiness Progress</div>
+              <div class="flex items-center gap-2 mt-0.5">
+                <span id="checklist-completed-count" class="text-2xl font-black font-mono-num text-white">0 / 20</span>
+                <span id="checklist-percent-badge" class="px-2 py-0.5 rounded text-xs font-bold bg-pink-500/20 text-pink-300 border border-pink-500/30">0% Completed</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button id="reset-checklist-btn" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-red-400 bg-slate-800 hover:bg-slate-750 transition-colors">
+                Reset
+              </button>
+              <button id="share-progress-btn" class="btn-pink px-4 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                <span>Share My Progress Card</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Linear Progress Indicator -->
+          <div class="w-full h-3 bg-slate-950 rounded-full overflow-hidden p-0.5 border border-slate-800">
+            <div id="checklist-progress-bar" class="h-full bg-gradient-to-r from-pink-500 via-amber-400 to-cyan-400 rounded-full transition-all duration-300" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Filter Tabs & Search Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <button class="checklist-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-pink-500 shadow-md shadow-pink-500/30 transition-all" data-category="all">
+              All (20)
+            </button>
+            <button class="checklist-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all" data-category="settings">
+              Settings (5)
+            </button>
+            <button class="checklist-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all" data-category="story">
+              Story (5)
+            </button>
+            <button class="checklist-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all" data-category="collectibles">
+              Collectibles (5)
+            </button>
+            <button class="checklist-tab-btn px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-all" data-category="online">
+              Online Prep (5)
+            </button>
+          </div>
+
+          <div class="w-full sm:w-64">
+            <input type="text" id="checklist-search-input" placeholder="Search tasks or collectibles..." class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-cyan-400 transition-colors">
+          </div>
+        </div>
+
+        <!-- Checklist Items List -->
+        <div id="checklist-items-container" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- SECTION 4: DIGITAL PSN & XBOX WALLET / GIFT CARDS PROMO CARD -->
+    <!-- ================================================================= -->
+    <section id="gift-cards" class="vice-card p-6 sm:p-8 bg-gradient-to-r from-[#171733] via-[#1b1535] to-[#141d33] border-amber-500/30">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="space-y-3 max-w-2xl text-center lg:text-left">
+          <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-bold uppercase tracking-wider">
+            ⚡ Instant Code Delivery
+          </div>
+          <h3 class="font-display font-black text-2xl sm:text-3xl text-white">
+            Need Digital PSN or Xbox Gift Cards Tonight?
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Need last-minute wallet top-ups to preload GTA 6 or execute the New Zealand account method? Order digital PlayStation & Xbox vouchers with instant digital code delivery via WhatsApp or Instagram.
+          </p>
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-medium text-slate-400 pt-1">
+            <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Instant WhatsApp Delivery</span>
+            <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> US, UK, EU, UAE & NZ Regions</span>
+            <span class="flex items-center gap-1.5"><span class="text-emerald-400">✓</span> 24/7 Live Support</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto flex-shrink-0">
+          <!-- WHATSAPP ORDER LINK -->
+          <a href="#WHATSAPP_ORDER_LINK" id="whatsapp-order-btn" target="_blank" rel="noopener noreferrer" class="btn-cyan px-6 py-3.5 rounded-xl text-sm font-extrabold flex items-center justify-center gap-2 shadow-lg shadow-cyan-400/25">
+            <span>💬</span>
+            <span>Order Digital Codes on WhatsApp &rarr;</span>
+          </a>
+
+          <!-- KO-FI LINK (Promo Card Alternative) -->
+          <a href="#KOFI_LINK" target="_blank" rel="noopener noreferrer" class="btn-outline px-6 py-3 rounded-xl text-xs font-bold flex items-center justify-center gap-2 text-center">
+            <span>☕</span>
+            <span>Tip Developer via Ko-fi</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- BOTTOM AD BANNER CONTAINER (Active Sponsor Grid + Ad Script Slot) -->
+    <!-- ================================================================= -->
+    <div id="ad-banner-bottom" class="max-w-5xl mx-auto px-4 my-8 space-y-3">
+      <!-- AD NETWORK SCRIPT CONTAINER (Paste Adsterra / Monetag / AdSense script inside here) -->
+      <div id="ad-network-bottom-slot" class="hidden">
+        <!-- PASTE YOUR SECOND AD SCRIPT TAG HERE:
+        <script type="text/javascript" src="//your-ad-network.com/native.js"></script>
+        -->
+      </div>
+
+      <!-- ACTIVE NATIVE SPONSOR OFFERS GRID (Already working & earning) -->
+      <div class="vice-card p-5 border-slate-800 bg-[#101024]">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+            <span class="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">Trending Day-One Gaming Offers</span>
+          </div>
+          <span class="text-[10px] text-slate-500 uppercase font-mono">Promoted</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <!-- Offer 1: Gaming VPN -->
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400/40 transition-all flex flex-col justify-between space-y-3 group">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">Early Play VPN</span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold">70% Off</span>
+              </div>
+              <h4 class="font-bold text-white text-xs group-hover:text-cyan-400 transition-colors">NordVPN / Express Gaming VPN</h4>
+              <p class="text-[11px] text-slate-400 mt-1 leading-snug">Connect to New Zealand servers instantly to bypass console region locks & reduce game ping.</p>
+            </div>
+            <a href="https://nordvpn.com/" target="_blank" rel="noopener noreferrer sponsored" class="btn-cyan py-1.5 px-3 rounded-lg text-[11px] font-bold text-center block w-full">
+              Get Gaming VPN Deal &rarr;
+            </a>
+          </div>
+
+          <!-- Offer 2: Official Xbox Storage -->
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-pink-500/40 transition-all flex flex-col justify-between space-y-3 group">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-pink-500/10 text-pink-400 border border-pink-500/20">Xbox Hardware</span>
+                <span class="text-[10px] font-mono text-emerald-400 font-bold">Prime Stock</span>
+              </div>
+              <h4 class="font-bold text-white text-xs group-hover:text-pink-400 transition-colors">WD_BLACK C50 1TB Xbox Card</h4>
+              <p class="text-[11px] text-slate-400 mt-1 leading-snug">Instant plug-and-play Xbox Series X|S storage. Don't waste hours deleting games for GTA 6.</p>
+            </div>
+            <a href="#AFFILIATE_XBOX_CARD" class="btn-pink py-1.5 px-3 rounded-lg text-[11px] font-bold text-center block w-full">
+              View Xbox Card Price &rarr;
+            </a>
+          </div>
+
+          <!-- Offer 3: Instant Wallet Gift Cards -->
+          <div class="p-3.5 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-amber-400/40 transition-all flex flex-col justify-between space-y-3 group">
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="px-1.5 py-0.5 rounded text-[9px] font-bold bg-amber-400/10 text-amber-400 border border-amber-400/20">Digital Wallet</span>
+                <span class="text-[10px] font-mono text-cyan-400 font-bold">Instant Code</span>
+              </div>
+              <h4 class="font-bold text-white text-xs group-hover:text-amber-400 transition-colors">PSN & Xbox Gift Cards (NZ/US/UK)</h4>
+              <p class="text-[11px] text-slate-400 mt-1 leading-snug">Need wallet cash tonight to buy GTA 6? Fast digital codes delivered directly to WhatsApp.</p>
+            </div>
+            <a href="#WHATSAPP_ORDER_LINK" class="btn-outline border-amber-500/40 hover:bg-amber-500/10 text-amber-300 py-1.5 px-3 rounded-lg text-[11px] font-bold text-center block w-full">
+              Order Digital Codes &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END BOTTOM AD BANNER -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-slate-800 bg-[#08080F] text-slate-400 text-xs py-8 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-2 text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <span class="text-xl">🌴</span>
+          <span class="font-display font-black text-white text-base">VICECITYLAUNCH<span class="text-pink-500">.LIVE</span></span>
+        </div>
+        <p class="max-w-md text-slate-500 text-[11px] leading-relaxed">
+          ViceCityLaunch.live is an independent community utility created for gamers. Not affiliated with, endorsed by, or sponsored by Rockstar Games, Take-Two Interactive, Sony Interactive Entertainment, or Microsoft.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-semibold">
+        <a href="#rollout" class="hover:text-white transition-colors">Clocks</a>
+        <a href="#nz-trick" class="hover:text-white transition-colors">NZ Trick</a>
+        <a href="#storage-calc" class="hover:text-white transition-colors">Storage Calc</a>
+        <a href="#checklist" class="hover:text-white transition-colors">Checklist</a>
+        <!-- KO-FI LINK (Footer) -->
+        <a href="#KOFI_LINK" target="_blank" rel="noopener noreferrer" class="text-pink-400 hover:text-pink-300 font-bold transition-colors">Support on Ko-fi</a>
+      </div>
+
+      <div class="text-slate-500 text-[11px] text-center md:text-right">
+        <div>Built for the Grand Theft Auto VI Launch</div>
+        <div class="text-slate-600">&copy; 2026 ViceCityLaunch.live</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Sticky Bottom Bar -->
+  <div class="fixed bottom-0 inset-x-0 z-40 bg-[#0B0B14]/95 backdrop-blur-md border-t border-slate-800 p-2 md:hidden">
+    <div class="grid grid-cols-4 gap-1 text-center">
+      <a href="#rollout" class="py-1 px-2 rounded hover:bg-slate-800 text-[11px] font-bold text-slate-300 flex flex-col items-center">
+        <span>⏰</span>
+        <span>Clocks</span>
+      </a>
+      <a href="#nz-trick" class="py-1 px-2 rounded hover:bg-slate-800 text-[11px] font-bold text-pink-400 flex flex-col items-center">
+        <span>🇳🇿</span>
+        <span>NZ Trick</span>
+      </a>
+      <a href="#storage-calc" class="py-1 px-2 rounded hover:bg-slate-800 text-[11px] font-bold text-cyan-400 flex flex-col items-center">
+        <span>💾</span>
+        <span>Storage</span>
+      </a>
+      <a href="#checklist" class="py-1 px-2 rounded hover:bg-slate-800 text-[11px] font-bold text-amber-400 flex flex-col items-center">
+        <span>🎯</span>
+        <span>Checklist</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- High-Converting Floating Social Bar (Early Access Offer / Adsterra style) -->
+  <div id="social-bar-alert" class="fixed bottom-14 md:bottom-6 right-4 z-50 max-w-sm bg-[#131328] border border-cyan-400/50 rounded-2xl p-3.5 shadow-2xl shadow-cyan-400/25 translate-y-32 opacity-0 transition-all duration-500 pointer-events-auto flex items-start gap-3">
+    <div class="w-9 h-9 rounded-xl bg-cyan-400/20 border border-cyan-400/40 flex items-center justify-center text-lg flex-shrink-0">
+      🇳🇿
+    </div>
+    <div class="flex-1 pr-1">
+      <div class="flex items-center gap-2 mb-0.5">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-live-indicator"></span>
+        <span class="text-[10px] uppercase font-bold text-emerald-400 tracking-wider">Live Traffic Spike</span>
+      </div>
+      <div class="text-xs font-bold text-white leading-tight">
+        14,800+ players currently active in New Zealand
+      </div>
+      <p class="text-[11px] text-slate-400 mt-0.5 leading-snug">
+        Use the 5-minute console region swap to play right now.
+      </p>
+      <div class="mt-2 flex items-center gap-2">
+        <a href="#nz-trick" id="social-bar-cta" class="btn-cyan py-1 px-3 rounded-lg text-[10px] font-black uppercase tracking-wider inline-flex items-center gap-1">
+          <span>See How To Play</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+    <button id="social-bar-close" class="text-slate-400 hover:text-white text-xs p-1 transition-colors" title="Dismiss">
+      ✕
+    </button>
+  </div>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
